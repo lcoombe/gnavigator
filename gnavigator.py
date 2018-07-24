@@ -15,17 +15,13 @@ import subprocess
 import re
 import argparse
 
-# ensure gnavigator's src directory is in PYTHONPATH
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(
-                sys.argv[0]))) + '/gnavigator/src')
-
-import classify
-import checklg
-import reporting
-import utilities as util
-import config
-import alignment
-import parseGmap
+import src.classify as classify
+import src.checklg as checklg
+import src.reporting as reporting
+import src.utilities as util
+import src.config as config
+import src.alignment as alignment
+import src.parseGmap as parseGmap
 
 try:
     import pandas as pd
